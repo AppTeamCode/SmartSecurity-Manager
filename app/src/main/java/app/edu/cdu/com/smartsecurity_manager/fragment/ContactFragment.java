@@ -1,14 +1,7 @@
-package app.edu.cdu.com.smartsecurity_manager.ui.contact;
-
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+package app.edu.cdu.com.smartsecurity_manager.fragment;
 
 import app.edu.cdu.com.smartsecurity_manager.R;
-import app.edu.cdu.com.smartsecurity_manager.ui.BaseFragment;
+import app.edu.cdu.com.smartsecurity_manager.fragment.BaseFragment;
 
 /**
  * Created by Pantiy on 2017/3/12.

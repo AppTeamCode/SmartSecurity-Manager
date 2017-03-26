@@ -1,11 +1,9 @@
-package app.edu.cdu.com.smartsecurity_manager.ui.device;
+package app.edu.cdu.com.smartsecurity_manager.fragment;
 
-import android.util.Log;
 import android.widget.ListView;
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DeviceItemsAdapter;
-import app.edu.cdu.com.smartsecurity_manager.ui.BaseFragment;
-import app.edu.cdu.com.smartsecurity_manager.utils.L;
+import app.edu.cdu.com.smartsecurity_manager.fragment.BaseFragment;
 
 /**
  * Created by Pantiy on 2017/3/12.

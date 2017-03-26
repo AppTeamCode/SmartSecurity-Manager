@@ -1,7 +1,7 @@
-package app.edu.cdu.com.smartsecurity_manager.ui.message;
+package app.edu.cdu.com.smartsecurity_manager.fragment;
 
 import app.edu.cdu.com.smartsecurity_manager.R;
-import app.edu.cdu.com.smartsecurity_manager.ui.BaseFragment;
+import app.edu.cdu.com.smartsecurity_manager.fragment.BaseFragment;
 
 /**
  * Created by Pantiy on 2017/3/12.
