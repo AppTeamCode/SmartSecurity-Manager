@@ -1,4 +1,4 @@
-package app.edu.cdu.com.smartsecurity_manager.ui.activity;
+package app.edu.cdu.com.smartsecurity_manager.ui;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;

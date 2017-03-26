@@ -1,4 +1,4 @@
-package app.edu.cdu.com.smartsecurity_manager.ui.fragment;
+package app.edu.cdu.com.smartsecurity_manager.fragment;
 
 import android.widget.ListView;
 import app.edu.cdu.com.smartsecurity_manager.R;

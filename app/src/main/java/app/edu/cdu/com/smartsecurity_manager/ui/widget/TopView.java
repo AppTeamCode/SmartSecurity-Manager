@@ -1,4 +1,4 @@
-package app.edu.cdu.com.smartsecurity_manager.ui;
+package app.edu.cdu.com.smartsecurity_manager.ui.widget;
 
 import android.content.Context;
 import android.graphics.Color;
