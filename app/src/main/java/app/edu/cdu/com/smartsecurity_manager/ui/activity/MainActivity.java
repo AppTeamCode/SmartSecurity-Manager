@@ -1,4 +1,4 @@
-package app.edu.cdu.com.smartsecurity_manager.ui;
+package app.edu.cdu.com.smartsecurity_manager.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -12,7 +12,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;

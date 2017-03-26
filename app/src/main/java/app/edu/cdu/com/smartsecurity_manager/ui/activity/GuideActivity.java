@@ -1,4 +1,4 @@
-package app.edu.cdu.com.smartsecurity_manager.ui;
+package app.edu.cdu.com.smartsecurity_manager.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.edu.cdu.com.smartsecurity_manager.R;
+import app.edu.cdu.com.smartsecurity_manager.ui.activity.MainActivity;
 
 /**
  * 项目名：  SmartSecurity-Manager

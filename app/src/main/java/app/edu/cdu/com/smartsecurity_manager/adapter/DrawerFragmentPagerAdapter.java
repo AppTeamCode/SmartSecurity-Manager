@@ -5,9 +5,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
-import app.edu.cdu.com.smartsecurity_manager.fragment.ContactFragment;
-import app.edu.cdu.com.smartsecurity_manager.fragment.DeviceFragment;
-import app.edu.cdu.com.smartsecurity_manager.fragment.MessageFragment;
+import app.edu.cdu.com.smartsecurity_manager.ui.fragment.ContactFragment;
+import app.edu.cdu.com.smartsecurity_manager.ui.fragment.DeviceFragment;
+import app.edu.cdu.com.smartsecurity_manager.ui.fragment.MessageFragment;
 
 /**
  * Created by Pantiy on 2017/3/12.

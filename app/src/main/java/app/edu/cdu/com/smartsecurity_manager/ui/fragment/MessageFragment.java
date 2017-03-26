@@ -1,14 +1,13 @@
-package app.edu.cdu.com.smartsecurity_manager.fragment;
+package app.edu.cdu.com.smartsecurity_manager.ui.fragment;
 
 import app.edu.cdu.com.smartsecurity_manager.R;
-import app.edu.cdu.com.smartsecurity_manager.fragment.BaseFragment;
 
 /**
  * Created by Pantiy on 2017/3/12.
  * Copyright © 2016 All rights Reserved by Pantiy
  */
 
-public class ContactFragment extends BaseFragment {
+public class MessageFragment extends BaseFragment {
 
     @Override
     protected void findViews() {
@@ -27,6 +26,6 @@ public class ContactFragment extends BaseFragment {
 
     @Override
     protected int setLayoutRes() {
-        return R.layout.fragment_contact;
+        return R.layout.fragment_message;
     }
 }

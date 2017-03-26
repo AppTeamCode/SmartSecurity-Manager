@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <!--启动页面-->
-        <activity android:name=".ui.SplashActivity"
+        <activity android:name=".ui.activity.SplashActivity"
             android:theme="@style/NoActionBarFullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,10 +18,10 @@
             </intent-filter>
         </activity>
         <!--主界面-->
-        <activity android:name=".ui.MainActivity"
+        <activity android:name=".ui.activity.MainActivity"
             android:windowSoftInputMode="stateHidden|adjustPan"/>
         <!--引导页-->
-        <activity android:name=".ui.GuideActivity"/>
+        <activity android:name=".ui.activity.GuideActivity"/>
     </application>
 
 </manifest>

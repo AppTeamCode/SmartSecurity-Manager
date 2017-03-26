@@ -1,4 +1,4 @@
-package app.edu.cdu.com.smartsecurity_manager.ui;
+package app.edu.cdu.com.smartsecurity_manager.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
