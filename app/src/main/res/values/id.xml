@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <item name="titleTextViewInTopBar" type="id"/>
+    <item name="rightButtonInTopBar" type="id"/>
+    <item name="leftButtonInTopBar" type="id"/>
+    
+</resources>

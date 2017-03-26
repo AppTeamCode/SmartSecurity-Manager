@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="?attr/colorPrimary">
+
+    <ImageView
+        android:id="@+id/userAvatarOnTopBar_ImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/des_userAvatar"
+        android:src="@drawable/avatar"/>
+
+    <ImageView
+        android:id="@+id/more_imageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:src="@mipmap/ic_more"/>
+
+    <TextView
+        android:id="@+id/currentFragmentName_textView"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/userAvatarOnTopBar_ImageView"
+        android:textSize="20sp"
+        android:textColor="#fff"/>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/more_imageView"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/query_hint"/>
+
+</RelativeLayout>

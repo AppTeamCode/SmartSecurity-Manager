@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SmartSecurity-Manager</string>
+    <string name="guide_item_1">引导页1</string>
+    <string name="guide_item_2">引导页2</string>
+    <string name="guide_item_3">引导页3</string>
+    <string name="drawer_opened">Open</string>
+    <string name="drawer_closed">Close</string>
+
+    <!--MainActivity-->
+    <string name="user_name">Pantiy</string>
+    <string name="user_state">在线</string>
+    <string name="des_userAvatar">用户头像</string>
+    <string name="query_hint">搜索</string>
+    <string name="device">设备</string>
+    <string name="contact">联系人</string>
+    <string name="message">消息</string>
+    <string name="des_deviceIcon">设备头像</string>
+    <string name="device_name">设备名称</string>
+    <string name="login_time">登录时间 2015-01-01 12:00</string>
+    <string name="device_state">可控制</string>
+    <string name="lastMessageTime">17:00</string>
+    <string name="findNewDevice">发现新设备</string>
+    <string name="slogan">玩转智能设备，发现新生活</string>
+
+</resources>
