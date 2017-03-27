@@ -19,7 +19,7 @@ import app.edu.cdu.com.smartsecurity_manager.R;
 
 public class TopView extends LinearLayout {
 
-    private static final String TAG = "TopBar";
+    private static final String TAG = "TopView";
 
     private static final String LEFT = "左边";
     private static final String TITLE = "标题";
