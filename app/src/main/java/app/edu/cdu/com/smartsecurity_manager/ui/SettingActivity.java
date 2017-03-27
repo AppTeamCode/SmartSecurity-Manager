@@ -3,7 +3,6 @@ package app.edu.cdu.com.smartsecurity_manager.ui;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView;
 
