@@ -10,5 +10,5 @@ package app.edu.cdu.com.smartsecurity_manager.entity;
  */
 
 public class ContactData {
-    private  int i;
+    
 }
