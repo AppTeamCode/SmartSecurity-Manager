@@ -12,5 +12,4 @@ package app.edu.cdu.com.smartsecurity_manager.entity;
 public class ContactData {
     private String string;
     private String s;
-    private int i;
 }
