@@ -22,6 +22,7 @@
             android:windowSoftInputMode="stateHidden|adjustPan"/>
         <!--引导页-->
         <activity android:name=".ui.GuideActivity"/>
+        <activity android:name=".ui.SettingActivity"/>
     </application>
 
 </manifest>

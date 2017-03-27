@@ -1,11 +1,13 @@
 package app.edu.cdu.com.smartsecurity_manager.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -130,6 +132,17 @@ public class MainActivity extends BaseActivity {
                         break;
                 }
                 switchCurrentState(current);
+            }
+        });
+        mSettingItemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 2:
+                        Intent intent = new Intent(MainActivity.this,SettingActivity.class);
+                        startActivity(intent);
+                        break;
+                }
             }
         });
     }
