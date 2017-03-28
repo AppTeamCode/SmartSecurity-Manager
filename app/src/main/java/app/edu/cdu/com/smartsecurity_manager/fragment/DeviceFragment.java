@@ -14,7 +14,7 @@ public class DeviceFragment extends BaseFragment {
     private ListView mDeviceItemsListView;
 
     @Override
-    protected void findViews() {
+    protected void initViews() {
         mDeviceItemsListView = (ListView) mView.findViewById(R.id.deviceItems_listView);
     }
 

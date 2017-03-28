@@ -10,7 +10,7 @@ import app.edu.cdu.com.smartsecurity_manager.R;
 public class ContactFragment extends BaseFragment {
 
     @Override
-    protected void findViews() {
+    protected void initViews() {
 
     }
 

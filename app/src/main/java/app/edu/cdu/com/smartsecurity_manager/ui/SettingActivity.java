@@ -3,7 +3,10 @@ package app.edu.cdu.com.smartsecurity_manager.ui;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.ExpandableListView;
+
 import app.edu.cdu.com.smartsecurity_manager.R;
+import app.edu.cdu.com.smartsecurity_manager.adapter.ExpandableDrawerItemsAdapter;
 import app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView;
 
 /**
@@ -12,19 +15,16 @@ import app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView;
 
 public class SettingActivity extends BaseActivity {
 
-    private TopView mTopView;
+    private ExpandableListView mExpandableListView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-        mTopView = (TopView) findViewById(R.id.topView);
-        mTopView.setText("返回","我的设置",null);
-        mTopView.setListeners(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        },null);
+        mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
+        ExpandableDrawerItemsAdapter adapter = new ExpandableDrawerItemsAdapter(this);
+        mExpandableListView.setAdapter(adapter);
+        mExpandableListView.setGroupIndicator(null);
+        mExpandableListView.setDivider(null);
     }
 }

@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerFragmentPagerAdapter;
+import app.edu.cdu.com.smartsecurity_manager.adapter.ExpandableDrawerItemsAdapter;
 import app.edu.cdu.com.smartsecurity_manager.adapter.SettingItemsAdapter;
 
 public class MainActivity extends BaseActivity {
@@ -35,6 +37,7 @@ public class MainActivity extends BaseActivity {
     private RadioGroup mBottomBarRadioGroup;
     private TextView mCurrentFragmentNameTextView;
     private SearchView mSearchView;
+    private ExpandableListView mDrawerItemsExpandableListView;
 
     private int[] mFragmentName = new int[] {R.string.device, R.string.contact, R.string.message};
     private List<RadioButton> mRadioButtonList = new ArrayList<>();
@@ -43,7 +46,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViews();
+        initViews();
         setAdapters();
         addListeners();
     }
@@ -63,7 +66,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    private void findViews() {
+    private void initViews() {
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
@@ -74,6 +77,10 @@ public class MainActivity extends BaseActivity {
         mCurrentFragmentNameTextView.setText(R.string.device);
 
         mSettingItemsListView = (ListView) findViewById(R.id.settingItems_listView);
+        mDrawerItemsExpandableListView =
+                (ExpandableListView) findViewById(R.id.drawerItems_expandableListView);
+        mDrawerItemsExpandableListView.setGroupIndicator(null);
+        mDrawerItemsExpandableListView.setDivider(null);
         mBottomBarRadioGroup = (RadioGroup) findViewById(R.id.bottomBar_RadioGroup);
 
         RadioButton radioButton = (RadioButton) findViewById(R.id.device_radioButton);
@@ -88,6 +95,9 @@ public class MainActivity extends BaseActivity {
     private void setAdapters() {
         SettingItemsAdapter settingItemsAdapter = new SettingItemsAdapter(this);
         mSettingItemsListView.setAdapter(settingItemsAdapter);
+        ExpandableDrawerItemsAdapter drawerItemsAdapter =
+                new ExpandableDrawerItemsAdapter(this);
+        mDrawerItemsExpandableListView.setAdapter(drawerItemsAdapter);
         DrawerFragmentPagerAdapter drawerFragmentPagerAdapter =
                 new DrawerFragmentPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(drawerFragmentPagerAdapter);

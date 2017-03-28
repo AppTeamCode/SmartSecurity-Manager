@@ -20,13 +20,13 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(setLayoutRes(), container, false);
-        findViews();
+        initViews();
         setAdapter();
         setListener();
         return mView;
     }
 
-    protected abstract void findViews();
+    protected abstract void initViews();
 
     protected abstract void setAdapter();
 

@@ -46,9 +46,9 @@ public class SettingItemsAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         if (view == null) {
             view = LayoutInflater.from(mContext).inflate(R.layout.list_item_with_icon,viewGroup,false);
-            TextView textView = (TextView) view.findViewById(R.id.settingItem_textView);
+            TextView textView = (TextView) view.findViewById(R.id.itemName_textView);
             textView.setText(mSettingItems[i]);
-            ImageView imageView = (ImageView) view.findViewById(R.id.settingItem_icon);
+            ImageView imageView = (ImageView) view.findViewById(R.id.itemIcon_imageView);
             imageView.setImageResource(R.mipmap.ic_setting);
             imageView.setBackgroundColor(Color.GRAY);
         }

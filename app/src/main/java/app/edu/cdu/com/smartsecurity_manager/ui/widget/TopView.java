@@ -49,6 +49,7 @@ public class TopView extends LinearLayout {
         initViews();
     }
 
+
     private void initViews() {
 
         Log.i(TAG, " initViews() " );
