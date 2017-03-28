@@ -10,5 +10,9 @@ package app.edu.cdu.com.smartsecurity_manager.entity;
  */
 
 public class ContactData {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> b2997d365f56e306f4ae8075a8437fdcece96a47
 }

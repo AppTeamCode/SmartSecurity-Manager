@@ -9,10 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import app.edu.cdu.com.smartsecurity_manager.R;
 
 /**

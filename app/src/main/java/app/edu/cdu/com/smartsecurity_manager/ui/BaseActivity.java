@@ -11,9 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
-
 import java.util.List;
-
 import app.edu.cdu.com.smartsecurity_manager.service.SmartService;
 import app.edu.cdu.com.smartsecurity_manager.utils.StaticClass;
 

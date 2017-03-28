@@ -14,7 +14,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 import app.edu.cdu.com.smartsecurity_manager.R;
