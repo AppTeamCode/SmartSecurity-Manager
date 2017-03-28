@@ -1,16 +1,13 @@
 package app.edu.cdu.com.smartsecurity_manager.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SearchView;
@@ -19,8 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerFragmentPagerAdapter;
-import app.edu.cdu.com.smartsecurity_manager.adapter.ExpandableDrawerItemsAdapter;
-import app.edu.cdu.com.smartsecurity_manager.adapter.SettingItemsAdapter;
+import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerItemsAdapter;
 
 public class MainActivity extends BaseActivity {
 
@@ -33,7 +29,6 @@ public class MainActivity extends BaseActivity {
     private DrawerLayout mDrawerLayout;
     private ViewPager mViewPager;
     private ImageView mUserAvatarOnTopBar;
-    private ListView mSettingItemsListView;
     private RadioGroup mBottomBarRadioGroup;
     private TextView mCurrentFragmentNameTextView;
     private SearchView mSearchView;
@@ -47,8 +42,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
-        setAdapters();
-        addListeners();
+        setupAdapters();
+        setupListeners();
     }
 
     @Override
@@ -76,7 +71,6 @@ public class MainActivity extends BaseActivity {
         mCurrentFragmentNameTextView = (TextView) findViewById(R.id.currentFragmentName_textView);
         mCurrentFragmentNameTextView.setText(R.string.device);
 
-        mSettingItemsListView = (ListView) findViewById(R.id.settingItems_listView);
         mDrawerItemsExpandableListView =
                 (ExpandableListView) findViewById(R.id.drawerItems_expandableListView);
         mDrawerItemsExpandableListView.setGroupIndicator(null);
@@ -92,18 +86,16 @@ public class MainActivity extends BaseActivity {
         mRadioButtonList.add(MESSAGE, radioButton);
     }
 
-    private void setAdapters() {
-        SettingItemsAdapter settingItemsAdapter = new SettingItemsAdapter(this);
-        mSettingItemsListView.setAdapter(settingItemsAdapter);
-        ExpandableDrawerItemsAdapter drawerItemsAdapter =
-                new ExpandableDrawerItemsAdapter(this);
+    private void setupAdapters() {
+        DrawerItemsAdapter drawerItemsAdapter =
+                new DrawerItemsAdapter(this);
         mDrawerItemsExpandableListView.setAdapter(drawerItemsAdapter);
         DrawerFragmentPagerAdapter drawerFragmentPagerAdapter =
                 new DrawerFragmentPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(drawerFragmentPagerAdapter);
     }
 
-    private void addListeners() {
+    private void setupListeners() {
 
         mUserAvatarOnTopBar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,17 +144,49 @@ public class MainActivity extends BaseActivity {
                 switchCurrentState(current);
             }
         });
-        mSettingItemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mDrawerItemsExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
-                    case 2:
-                        Intent intent = new Intent(MainActivity.this,SettingActivity.class);
-                        startActivity(intent);
-                        break;
-                }
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                skipToChild(groupPosition, childPosition);
+                return true;
             }
         });
+    }
+
+    private void skipToChild(int groupPosition, int childPosition) {
+
+        if (groupPosition != DrawerItemsAdapter.EXPANDABLE_POSITION) {
+            return;
+        }
+        switch (childPosition) {
+
+            case DrawerItemsAdapter.ACCOUNT_MANAGE:
+
+                break;
+
+            case DrawerItemsAdapter.MESSAGE_MANAGE:
+
+                break;
+
+            case DrawerItemsAdapter.DATA_MANAGE:
+
+                break;
+
+            case DrawerItemsAdapter.HISTORY_MANAGE:
+
+                break;
+
+            case DrawerItemsAdapter.PRIVACY_MANAGE:
+
+                break;
+
+            case DrawerItemsAdapter.PLUGIN_MANAGE:
+
+                break;
+
+            default:
+                break;
+        }
     }
 
     private void switchCurrentState(int current) {
@@ -177,5 +201,4 @@ public class MainActivity extends BaseActivity {
             mRadioButtonList.get(i).setBackgroundColor(UN_CHOOSE_COLOR);
         }
     }
-
 }

@@ -2,12 +2,10 @@ package app.edu.cdu.com.smartsecurity_manager.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.View;
 import android.widget.ExpandableListView;
 
 import app.edu.cdu.com.smartsecurity_manager.R;
-import app.edu.cdu.com.smartsecurity_manager.adapter.ExpandableDrawerItemsAdapter;
-import app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView;
+import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerItemsAdapter;
 
 /**
  * Created by Y.C. on 2017/3/27.
@@ -22,7 +20,7 @@ public class SettingActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
         mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
-        ExpandableDrawerItemsAdapter adapter = new ExpandableDrawerItemsAdapter(this);
+        DrawerItemsAdapter adapter = new DrawerItemsAdapter(this);
         mExpandableListView.setAdapter(adapter);
         mExpandableListView.setGroupIndicator(null);
         mExpandableListView.setDivider(null);

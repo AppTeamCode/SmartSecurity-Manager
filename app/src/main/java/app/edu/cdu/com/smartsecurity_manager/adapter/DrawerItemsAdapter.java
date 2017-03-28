@@ -15,16 +15,25 @@ import app.edu.cdu.com.smartsecurity_manager.R;
  * Copyright © 2016 All rights Reserved by Pantiy
  */
 
-public class ExpandableDrawerItemsAdapter extends BaseExpandableListAdapter {
+public class DrawerItemsAdapter extends BaseExpandableListAdapter {
 
-    private static String[] sDrawerGroupItems = new String[] {"我的资料", "我的收藏", "我的设置", "关于与帮助"};
-    private static String[][] sDrawerChildItems = new String[][] { null, null,
-            {"账号管理", "消息管理", "流量管理", "流量管理", "记录管理", "隐私管理", "插件管理"},
+    private static final String TAG = "DrawerItemsAdapter";
+
+    private static final String[] sDrawerGroupItems = new String[] {"我的资料", "我的收藏", "我的设置", "关于与帮助"};
+    private static final String[][] sDrawerChildItems = new String[][] { null, null,
+            {"账号管理", "消息管理", "流量管理", "记录管理", "隐私管理", "插件管理"},
             null};
+    public static final int EXPANDABLE_POSITION = 2;
+    public static final int ACCOUNT_MANAGE = 0;
+    public static final int MESSAGE_MANAGE = 1;
+    public static final int DATA_MANAGE = 2;
+    public static final int HISTORY_MANAGE = 3;
+    public static final int PRIVACY_MANAGE = 4;
+    public static final int PLUGIN_MANAGE = 5;
 
     private Context mContext;
 
-    public ExpandableDrawerItemsAdapter(Context context) {
+    public DrawerItemsAdapter(Context context) {
         mContext = context;
     }
 
@@ -35,8 +44,8 @@ public class ExpandableDrawerItemsAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        if (groupPosition == 2) {
-            return sDrawerChildItems[groupPosition].length;
+        if (groupPosition == EXPANDABLE_POSITION) {
+            return sDrawerChildItems[EXPANDABLE_POSITION].length;
         } else {
             return 0;
         }
@@ -82,16 +91,17 @@ public class ExpandableDrawerItemsAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-        if (convertView == null) {
+        if (groupPosition == EXPANDABLE_POSITION) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.list_item_with_icon, parent, false);
             convertView.setPadding(35, 0, 0, 0);
             ImageView imageView = (ImageView) convertView.findViewById(R.id.itemIcon_imageView);
             imageView.setImageResource(R.mipmap.ic_setting);
             imageView.setBackgroundColor(Color.GRAY);
             TextView textView = (TextView) convertView.findViewById(R.id.itemName_textView);
-            textView.setText(sDrawerChildItems[groupPosition][childPosition]);
+            textView.setText(sDrawerChildItems[EXPANDABLE_POSITION][childPosition]);
+            return convertView;
         }
-        return convertView;
+        return null;
     }
 
     @Override

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <include layout="@layout/topView_in_main_activity"/>
+    <include layout="@layout/topview_in_main_activity"/>
 
     <include layout="@layout/drawer"/>
 
