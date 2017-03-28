@@ -54,6 +54,15 @@ public class MainActivity extends BaseActivity {
         mSearchView.clearFocus();
     }
 
+    @Override
+    public void onBackPressed() {
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+            mDrawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
     private void findViews() {
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
