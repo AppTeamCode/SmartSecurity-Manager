@@ -5,6 +5,7 @@ import android.support.annotation.IdRes;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
@@ -12,6 +13,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
+
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import app.edu.cdu.com.smartsecurity_manager.R;
@@ -19,6 +22,8 @@ import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerFragmentPagerAdapter;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerItemsAdapter;
 
 public class MainActivity extends BaseActivity {
+
+    private static final String TAG = "MainActivity";
 
     private static final int UN_CHOOSE_COLOR = 0xff3f51b5;
     private static final int CHOOSE_COLOR = 0xff47479f;
@@ -67,6 +72,7 @@ public class MainActivity extends BaseActivity {
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mUserAvatarOnTopBar = (ImageView) findViewById(R.id.userAvatarOnTopBar_ImageView);
         mSearchView = (SearchView) findViewById(R.id.searchView);
+        hideSearchViewSubLine();
 
         mCurrentFragmentNameTextView = (TextView) findViewById(R.id.currentFragmentName_textView);
         mCurrentFragmentNameTextView.setText(R.string.device);
@@ -199,6 +205,21 @@ public class MainActivity extends BaseActivity {
     private void resetBackgroundColor() {
         for (int i = 0; i < mRadioButtonList.size(); i++) {
             mRadioButtonList.get(i).setBackgroundColor(UN_CHOOSE_COLOR);
+        }
+    }
+
+    private void hideSearchViewSubLine() {
+        try {
+            Class<?> searchViewClass = mSearchView.getClass();
+            Field field = searchViewClass.getDeclaredField("mSearchPlate");
+            field.setAccessible(true);
+            View view = (View) field.get(mSearchView);
+            view.setBackground(null);
+            field.setAccessible(false);
+        } catch (NoSuchFieldException ne) {
+            Log.e(TAG, "get field ", ne);
+        } catch (IllegalAccessException iae) {
+            Log.e(TAG, "field.get() ", iae);
         }
     }
 }

@@ -37,11 +37,12 @@
         android:id="@+id/searchView"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
         android:layout_toLeftOf="@id/more_imageView"
         android:gravity="center_vertical"
         android:layout_centerVertical="true"
         android:iconifiedByDefault="false"
+        android:background="@drawable/search_view"
         android:queryHint="@string/query_hint"/>
 
 </RelativeLayout>
