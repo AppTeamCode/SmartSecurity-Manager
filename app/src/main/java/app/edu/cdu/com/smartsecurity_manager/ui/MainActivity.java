@@ -1,5 +1,6 @@
 package app.edu.cdu.com.smartsecurity_manager.ui;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.view.GravityCompat;
@@ -72,7 +73,7 @@ public class MainActivity extends BaseActivity {
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mUserAvatarOnTopBar = (ImageView) findViewById(R.id.userAvatarOnTopBar_ImageView);
         mSearchView = (SearchView) findViewById(R.id.searchView);
-        hideSearchViewSubLine();
+        changeSearchViewStyle();
 
         mCurrentFragmentNameTextView = (TextView) findViewById(R.id.currentFragmentName_textView);
         mCurrentFragmentNameTextView.setText(R.string.device);
@@ -208,7 +209,11 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    private void hideSearchViewSubLine() {
+    private void changeSearchViewStyle() {
+        if (Build.VERSION.SDK_INT < 21) {
+            return;
+        }
+        mSearchView.setBackground(getDrawable(R.drawable.search_view));
         try {
             Class<?> searchViewClass = mSearchView.getClass();
             Field field = searchViewClass.getDeclaredField("mSearchPlate");

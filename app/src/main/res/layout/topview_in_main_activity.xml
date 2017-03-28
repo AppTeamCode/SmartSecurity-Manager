@@ -42,7 +42,6 @@
         android:gravity="center_vertical"
         android:layout_centerVertical="true"
         android:iconifiedByDefault="false"
-        android:background="@drawable/search_view"
         android:queryHint="@string/query_hint"/>
 
 </RelativeLayout>
