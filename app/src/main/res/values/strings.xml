@@ -21,5 +21,6 @@
     <string name="lastMessageTime">17:00</string>
     <string name="findNewDevice">发现新设备</string>
     <string name="slogan">玩转智能设备，发现新生活</string>
+    <string name="device_contact">设备关联人</string>
 
 </resources>

@@ -1,6 +1,9 @@
 package app.edu.cdu.com.smartsecurity_manager.fragment;
 
+import android.widget.ExpandableListView;
+
 import app.edu.cdu.com.smartsecurity_manager.R;
+import app.edu.cdu.com.smartsecurity_manager.adapter.ContactItemsAdapter;
 
 /**
  * Created by Pantiy on 2017/3/12.
@@ -9,18 +12,21 @@ import app.edu.cdu.com.smartsecurity_manager.R;
 
 public class ContactFragment extends BaseFragment {
 
+    private ExpandableListView mContactElv;
+
     @Override
     protected void initViews() {
-
+        mContactElv = (ExpandableListView) mView.findViewById(R.id.contact_elv);
     }
 
     @Override
-    protected void setAdapter() {
-
+    protected void setupAdapters() {
+        ContactItemsAdapter adapter = new ContactItemsAdapter(getActivity());
+        mContactElv.setAdapter(adapter);
     }
 
     @Override
-    protected void setListener() {
+    protected void setupListeners() {
 
     }
 

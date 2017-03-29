@@ -21,16 +21,16 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mView = inflater.inflate(setLayoutRes(), container, false);
         initViews();
-        setAdapter();
-        setListener();
+        setupAdapters();
+        setupListeners();
         return mView;
     }
 
     protected abstract void initViews();
 
-    protected abstract void setAdapter();
+    protected abstract void setupAdapters();
 
-    protected abstract void setListener();
+    protected abstract void setupListeners();
 
     protected abstract int setLayoutRes();
 }

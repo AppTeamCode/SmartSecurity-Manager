@@ -19,13 +19,13 @@ public class DeviceFragment extends BaseFragment {
     }
 
     @Override
-    protected void setAdapter() {
+    protected void setupAdapters() {
         DeviceItemsAdapter deviceItemsAdapter = new DeviceItemsAdapter(getActivity());
         mDeviceItemsListView.setAdapter(deviceItemsAdapter);
     }
 
     @Override
-    protected void setListener() {
+    protected void setupListeners() {
 
     }
 

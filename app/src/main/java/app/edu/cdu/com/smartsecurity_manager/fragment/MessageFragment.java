@@ -15,12 +15,12 @@ public class MessageFragment extends BaseFragment {
     }
 
     @Override
-    protected void setAdapter() {
+    protected void setupAdapters() {
 
     }
 
     @Override
-    protected void setListener() {
+    protected void setupListeners() {
 
     }
 
