@@ -1,5 +1,6 @@
 package app.edu.cdu.com.smartsecurity_manager.ui;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -14,7 +15,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SearchView;
 import android.widget.TextView;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
@@ -161,39 +161,11 @@ public class MainActivity extends BaseActivity {
     }
 
     private void skipToChild(int groupPosition, int childPosition) {
-
         if (groupPosition != DrawerItemsAdapter.EXPANDABLE_POSITION) {
             return;
         }
-        switch (childPosition) {
-
-            case DrawerItemsAdapter.ACCOUNT_MANAGE:
-
-                break;
-
-            case DrawerItemsAdapter.MESSAGE_MANAGE:
-
-                break;
-
-            case DrawerItemsAdapter.DATA_MANAGE:
-
-                break;
-
-            case DrawerItemsAdapter.HISTORY_MANAGE:
-
-                break;
-
-            case DrawerItemsAdapter.PRIVACY_MANAGE:
-
-                break;
-
-            case DrawerItemsAdapter.PLUGIN_MANAGE:
-
-                break;
-
-            default:
-                break;
-        }
+        Intent intent = SettingActivity.newInstance(this, childPosition);
+        startActivity(intent);
     }
 
     private void switchCurrentState(int current) {

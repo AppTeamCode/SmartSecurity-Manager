@@ -24,12 +24,12 @@ public class DrawerItemsAdapter extends BaseExpandableListAdapter {
             {"账号管理", "消息管理", "流量管理", "记录管理", "隐私管理", "插件管理"},
             null};
     public static final int EXPANDABLE_POSITION = 2;
-    public static final int ACCOUNT_MANAGE = 0;
-    public static final int MESSAGE_MANAGE = 1;
-    public static final int DATA_MANAGE = 2;
-    public static final int HISTORY_MANAGE = 3;
-    public static final int PRIVACY_MANAGE = 4;
-    public static final int PLUGIN_MANAGE = 5;
+//    public static final int ACCOUNT_MANAGE = 0;
+//    public static final int MESSAGE_MANAGE = 1;
+//    public static final int DATA_MANAGE = 2;
+//    public static final int HISTORY_MANAGE = 3;
+//    public static final int PRIVACY_MANAGE = 4;
+//    public static final int PLUGIN_MANAGE = 5;
 
     private Context mContext;
 
