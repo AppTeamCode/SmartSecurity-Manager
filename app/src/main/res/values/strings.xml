@@ -22,5 +22,8 @@
     <string name="findNewDevice">发现新设备</string>
     <string name="slogan">玩转智能设备，发现新生活</string>
     <string name="device_contact">设备关联人</string>
+    <string name="alarm">警报</string>
+    <string name="inform">通知</string>
+    <string name="chat">聊天</string>
 
 </resources>

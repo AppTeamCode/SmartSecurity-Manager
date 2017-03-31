@@ -9,6 +9,7 @@
         android:id="@+id/contactGroupName_tv"
         android:layout_width="0dp"
         android:paddingLeft="35dp"
+        android:textColor="@color/colorDarkText"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
@@ -16,6 +17,7 @@
         android:id="@+id/contactGroupState_tv"
         android:layout_width="wrap_content"
         android:paddingRight="15dp"
+        android:textColor="@color/colorLightText"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>

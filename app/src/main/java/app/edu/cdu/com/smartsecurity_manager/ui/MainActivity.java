@@ -36,9 +36,9 @@ public class MainActivity extends BaseActivity {
     private ViewPager mViewPager;
     private ImageView mUserAvatarOnTopBar;
     private RadioGroup mBottomBarRadioGroup;
-    private TextView mCurrentFragmentNameTextView;
+    private TextView mCurrentFragmentNameTv;
     private SearchView mSearchView;
-    private ExpandableListView mDrawerItemsExpandableListView;
+    private ExpandableListView mDrawerItemsElv;
 
     private int[] mFragmentName = new int[] {R.string.device, R.string.contact, R.string.message};
     private List<RadioButton> mRadioButtonList = new ArrayList<>();
@@ -75,13 +75,13 @@ public class MainActivity extends BaseActivity {
         mSearchView = (SearchView) findViewById(R.id.searchView);
         changeSearchViewStyle();
 
-        mCurrentFragmentNameTextView = (TextView) findViewById(R.id.currentFragmentName_textView);
-        mCurrentFragmentNameTextView.setText(R.string.device);
+        mCurrentFragmentNameTv = (TextView) findViewById(R.id.currentFragmentName_textView);
+        mCurrentFragmentNameTv.setText(R.string.device);
 
-        mDrawerItemsExpandableListView =
+        mDrawerItemsElv =
                 (ExpandableListView) findViewById(R.id.drawerItems_expandableListView);
-        mDrawerItemsExpandableListView.setGroupIndicator(null);
-        mDrawerItemsExpandableListView.setDivider(null);
+        mDrawerItemsElv.setGroupIndicator(null);
+        mDrawerItemsElv.setDivider(null);
         mBottomBarRadioGroup = (RadioGroup) findViewById(R.id.bottomBar_RadioGroup);
 
         RadioButton radioButton = (RadioButton) findViewById(R.id.device_radioButton);
@@ -94,9 +94,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupAdapters() {
-        DrawerItemsAdapter drawerItemsAdapter =
-                new DrawerItemsAdapter(this);
-        mDrawerItemsExpandableListView.setAdapter(drawerItemsAdapter);
+        DrawerItemsAdapter drawerItemsAdapter = new DrawerItemsAdapter(this);
+        mDrawerItemsElv.setAdapter(drawerItemsAdapter);
         DrawerFragmentPagerAdapter drawerFragmentPagerAdapter =
                 new DrawerFragmentPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(drawerFragmentPagerAdapter);
@@ -151,7 +150,7 @@ public class MainActivity extends BaseActivity {
                 switchCurrentState(current);
             }
         });
-        mDrawerItemsExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+        mDrawerItemsElv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 skipToChild(groupPosition, childPosition);
@@ -171,7 +170,7 @@ public class MainActivity extends BaseActivity {
     private void switchCurrentState(int current) {
         resetBackgroundColor();
         mRadioButtonList.get(current).setBackgroundColor(CHOOSE_COLOR);
-        mCurrentFragmentNameTextView.setText(mFragmentName[current]);
+        mCurrentFragmentNameTv.setText(mFragmentName[current]);
         mViewPager.setCurrentItem(current);
     }
 

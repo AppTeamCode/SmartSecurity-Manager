@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorDarkText">#1d1919</color>
     <color name="colorLightText">#463c3c</color>
+    <color name="colorMessageRadioButtonChecked">#6E6363</color>
 </resources>
