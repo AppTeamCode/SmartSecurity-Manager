@@ -33,6 +33,6 @@ public class AccountManageFragment extends ManageFragment {
 
     @Override
     protected int setLayoutRes() {
-        return R.layout.fragment_message;
+        return 0;
     }
 }
