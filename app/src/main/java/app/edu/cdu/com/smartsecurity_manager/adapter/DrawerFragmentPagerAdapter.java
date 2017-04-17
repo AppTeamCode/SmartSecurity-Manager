@@ -2,7 +2,7 @@ package app.edu.cdu.com.smartsecurity_manager.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 import app.edu.cdu.com.smartsecurity_manager.fragment.ContactFragment;
@@ -14,7 +14,7 @@ import app.edu.cdu.com.smartsecurity_manager.fragment.MessageFragment;
  * Copyright © 2016 All rights Reserved by Pantiy
  */
 
-public class DrawerFragmentPagerAdapter extends FragmentStatePagerAdapter {
+public class DrawerFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> mFragmentList = new ArrayList<>();
 

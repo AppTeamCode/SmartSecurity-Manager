@@ -18,7 +18,6 @@ import app.edu.cdu.com.smartsecurity_manager.R;
 
 public class MessageFragment extends BaseFragment {
 
-    private static final int CHOOSE_COLOR = 0xff6e6363;
     private static final int ALARM = 0;
     private static final int INFORM = 1;
     private static final int CHAT = 2;

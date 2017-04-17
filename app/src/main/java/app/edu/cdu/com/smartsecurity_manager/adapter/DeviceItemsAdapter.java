@@ -42,7 +42,6 @@ public class DeviceItemsAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         if (view == null) {
             view = LayoutInflater.from(mContext).inflate(R.layout.list_item_for_device,viewGroup,false);
-            L.e("Here");
         }
         return view;
     }

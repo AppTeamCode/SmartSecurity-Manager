@@ -1,5 +1,7 @@
 package app.edu.cdu.com.smartsecurity_manager.fragment;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +16,7 @@ import android.view.ViewGroup;
 
 public abstract class BaseFragment extends Fragment {
 
+    protected Activity mActivity;
     protected View mView;
 
     @Nullable
@@ -24,6 +27,12 @@ public abstract class BaseFragment extends Fragment {
         setupAdapters();
         setupListeners();
         return mView;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mActivity = getActivity();
     }
 
     protected abstract void initViews();
