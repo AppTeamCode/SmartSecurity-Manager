@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  * Created by Pantiy on 2017/3/12.
@@ -22,8 +23,11 @@ public abstract class BaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(setLayoutRes(), container, false);
-        initViews();
+        if (mView == null) {
+            mView = inflater.inflate(setLayoutRes(), container, false);
+            Toast.makeText(getActivity(), "null", Toast.LENGTH_SHORT).show();
+        }
+        initViews(mView);
         setupAdapters();
         setupListeners();
         return mView;
@@ -35,7 +39,7 @@ public abstract class BaseFragment extends Fragment {
         mActivity = getActivity();
     }
 
-    protected abstract void initViews();
+    protected abstract void initViews(View view);
 
     protected abstract void setupAdapters();
 

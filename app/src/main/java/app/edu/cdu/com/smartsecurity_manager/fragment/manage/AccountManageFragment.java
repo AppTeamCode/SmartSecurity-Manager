@@ -1,6 +1,6 @@
 package app.edu.cdu.com.smartsecurity_manager.fragment.manage;
 
-import app.edu.cdu.com.smartsecurity_manager.R;
+import android.view.View;
 
 /**
  * SmartSecurity-Manager
@@ -17,7 +17,7 @@ public class AccountManageFragment extends ManageFragment {
     }
 
     @Override
-    protected void initViews() {
+    protected void initViews(View view) {
 
     }
 

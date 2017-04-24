@@ -1,6 +1,12 @@
 package app.edu.cdu.com.smartsecurity_manager.fragment;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.ContactItemsAdapter;
@@ -14,8 +20,15 @@ public class ContactFragment extends BaseFragment {
 
     private ExpandableListView mContactElv;
 
+    @Nullable
     @Override
-    protected void initViews() {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Toast.makeText(getActivity(), "Contact create", Toast.LENGTH_SHORT).show();
+        return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    @Override
+    protected void initViews(View view) {
         mContactElv = (ExpandableListView) mView.findViewById(R.id.contact_elv);
     }
 
