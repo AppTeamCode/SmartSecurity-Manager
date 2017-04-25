@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import app.edu.cdu.com.smartsecurity_manager.R;
+import app.edu.cdu.com.smartsecurity_manager.fragment.DeviceFragment;
 
 /**
  * SmartSecurity-Manager
@@ -21,13 +22,13 @@ public class SingleFragmentActivity extends BaseActivity {
         setContentView(R.layout.activity_single_fragment);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container);
+        Fragment fragment = createFragment();
         if (fragment != null) {
             fragmentManager.beginTransaction().add(R.id.fragment_container, fragment).commit();
         }
     }
 
     private Fragment createFragment() {
-        return null;
+        return new DeviceFragment();
     }
 }
