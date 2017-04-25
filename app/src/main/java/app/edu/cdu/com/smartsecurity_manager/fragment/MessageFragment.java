@@ -1,19 +1,12 @@
 package app.edu.cdu.com.smartsecurity_manager.fragment;
 
-import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import app.edu.cdu.com.smartsecurity_manager.R;
 
 /**
@@ -31,13 +24,6 @@ public class MessageFragment extends BaseFragment {
     private List<ListView> mListViews = new ArrayList<>();
 
     private RadioGroup mRadioGroup;
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Toast.makeText(getActivity(), "Message create", Toast.LENGTH_SHORT).show();
-        return super.onCreateView(inflater, container, savedInstanceState);
-    }
 
     @Override
     protected void initViews(View view) {

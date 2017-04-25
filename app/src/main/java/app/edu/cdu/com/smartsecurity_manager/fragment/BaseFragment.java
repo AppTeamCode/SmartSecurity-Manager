@@ -25,7 +25,6 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (mView == null) {
             mView = inflater.inflate(setLayoutRes(), container, false);
-            Toast.makeText(getActivity(), "null", Toast.LENGTH_SHORT).show();
         }
         initViews(mView);
         setupAdapters();

@@ -100,5 +100,4 @@ public class TopView extends LinearLayout {
         mLeftButton.setOnClickListener(left);
         mRightButton.setOnClickListener(right);
     }
-
 }

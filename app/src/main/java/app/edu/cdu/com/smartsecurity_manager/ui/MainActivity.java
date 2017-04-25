@@ -21,6 +21,7 @@ import java.util.List;
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerFragmentPagerAdapter;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerItemsAdapter;
+import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
 
 public class MainActivity extends BaseActivity {
 
@@ -35,6 +36,7 @@ public class MainActivity extends BaseActivity {
     private DrawerLayout mDrawerLayout;
     private ViewPager mViewPager;
     private ImageView mUserAvatarOnTopBar;
+    private ImageView mUserAvatarIv;
     private RadioGroup mBottomBarRadioGroup;
     private TextView mCurrentFragmentNameTv;
     private SearchView mSearchView;
@@ -72,6 +74,7 @@ public class MainActivity extends BaseActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mUserAvatarOnTopBar = (ImageView) findViewById(R.id.userAvatarOnTopBar_ImageView);
+        mUserAvatarIv = (ImageView) findViewById(R.id.userAvatar_ImageView);
         mSearchView = (SearchView) findViewById(R.id.searchView);
         changeSearchViewStyle();
 
@@ -102,6 +105,14 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupListeners() {
+
+        mUserAvatarIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SingleFragmentActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mUserAvatarOnTopBar.setOnClickListener(new View.OnClickListener() {
             @Override
