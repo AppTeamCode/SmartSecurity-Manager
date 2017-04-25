@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.ContactItemsAdapter;
+import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
 
 /**
  * Created by Pantiy on 2017/3/12.
@@ -18,7 +19,7 @@ import app.edu.cdu.com.smartsecurity_manager.adapter.ContactItemsAdapter;
 
 public class ContactFragment extends BaseFragment {
 
-    private ExpandableListView mContactElv;
+    private ExpandableListView mContactELV;
 
     @Nullable
     @Override
@@ -29,13 +30,13 @@ public class ContactFragment extends BaseFragment {
 
     @Override
     protected void initViews(View view) {
-        mContactElv = (ExpandableListView) mView.findViewById(R.id.contact_elv);
+        mContactELV = CommonViewHolder.get(view, R.id.contact_elv);
     }
 
     @Override
     protected void setupAdapters() {
         ContactItemsAdapter adapter = new ContactItemsAdapter(getActivity());
-        mContactElv.setAdapter(adapter);
+        mContactELV.setAdapter(adapter);
     }
 
     @Override

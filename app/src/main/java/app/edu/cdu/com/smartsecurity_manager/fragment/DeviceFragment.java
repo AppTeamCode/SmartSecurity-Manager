@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DeviceItemsAdapter;
+import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
 
 /**
  * Created by Pantiy on 2017/3/12.
@@ -29,7 +30,7 @@ public class DeviceFragment extends BaseFragment {
 
     @Override
     protected void initViews(View view) {
-        mDeviceItemsListView = (ListView) mView.findViewById(R.id.deviceItems_listView);
+        mDeviceItemsListView = CommonViewHolder.get(view, R.id.deviceItems_listView);
     }
 
     @Override

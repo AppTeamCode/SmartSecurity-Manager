@@ -1,11 +1,8 @@
 package app.edu.cdu.com.smartsecurity_manager.utils;
 
-import android.content.Loader;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
-
-import app.edu.cdu.com.smartsecurity_manager.R;
 
 /**
  * SmartSecurity-Manager
