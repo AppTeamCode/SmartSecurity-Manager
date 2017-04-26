@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
+
 /**
  * Created by Pantiy on 2017/3/12.
  * Copyright © 2016 All rights Reserved by Pantiy
@@ -36,6 +38,10 @@ public abstract class BaseFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         mActivity = getActivity();
+    }
+
+    protected <T extends View> T findView(int id) {
+        return CommonViewHolder.get(mView, id);
     }
 
     protected abstract void initViews(View view);

@@ -26,4 +26,7 @@
     <string name="inform">通知</string>
     <string name="chat">聊天</string>
 
+    <!--ChatFragment-->
+    <string name="send">发送</string>
+
 </resources>

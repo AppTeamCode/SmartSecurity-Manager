@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import app.edu.cdu.com.smartsecurity_manager.R;
+import app.edu.cdu.com.smartsecurity_manager.fragment.ChatFragment;
 import app.edu.cdu.com.smartsecurity_manager.fragment.DeviceFragment;
 
 /**
@@ -29,6 +30,6 @@ public class SingleFragmentActivity extends BaseActivity {
     }
 
     private Fragment createFragment() {
-        return new DeviceFragment();
+        return new ChatFragment();
     }
 }
