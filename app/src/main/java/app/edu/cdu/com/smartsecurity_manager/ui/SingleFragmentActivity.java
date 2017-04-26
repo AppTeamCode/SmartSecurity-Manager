@@ -5,7 +5,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import app.edu.cdu.com.smartsecurity_manager.R;
-import app.edu.cdu.com.smartsecurity_manager.fragment.DeviceFragment;
+import app.edu.cdu.com.smartsecurity_manager.fragment.AboutAndHelpFragment;
+import app.edu.cdu.com.smartsecurity_manager.fragment.DeviceShareFragment;
 
 /**
  * SmartSecurity-Manager
@@ -29,6 +30,6 @@ public class SingleFragmentActivity extends BaseActivity {
     }
 
     private Fragment createFragment() {
-        return new DeviceFragment();
+        return new AboutAndHelpFragment();
     }
 }

@@ -58,7 +58,7 @@ public class TopView extends LinearLayout {
         setOrientation(HORIZONTAL);
         setGravity(Gravity.CENTER_VERTICAL);
 
-        LayoutParams buttonLayoutParams = new LayoutParams(150, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LayoutParams buttonLayoutParams = new LayoutParams(200, ViewGroup.LayoutParams.WRAP_CONTENT);
         LayoutParams textViewLayoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT, 1.0f);
 

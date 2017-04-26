@@ -6,4 +6,9 @@
     <color name="colorDarkText">#1d1919</color>
     <color name="colorLightText">#463c3c</color>
     <color name="colorMessageRadioButtonChecked">#6E6363</color>
+    <color name="colorButton">#66ccff</color>
+    <color name="colortextview1">#6c0124</color>
+    <color name="colortextview2">#ffffff</color>
+    <color name="colortextview3">#264c72</color>
+
 </resources>
