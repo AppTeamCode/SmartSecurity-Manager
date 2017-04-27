@@ -27,6 +27,8 @@ import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
 
 public class ChatFragment extends BaseFragment {
 
+    private ChatAdapter mChatAdapter;
+
     private TopView mTopView;
     private RecyclerView mChatRv;
     private EditText mChatContentEt;
@@ -37,25 +39,48 @@ public class ChatFragment extends BaseFragment {
         mTopView = findView(R.id.topView);
         mTopView.setText("消息", "老王", null);
         mChatRv = findView(R.id.chat_recyclerView);
-        mChatRv.setLayoutManager(new LinearLayoutManager(getActivity()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        linearLayoutManager.setStackFromEnd(true);
+        mChatRv.setLayoutManager(linearLayoutManager);
         mChatContentEt = findView(R.id.chatContent_editText);
         mSendBtn = findView(R.id.send_button);
     }
 
     @Override
     protected void setupAdapters() {
-        ChatAdapter chatAdapter = new ChatAdapter(ChatMSGLab.get());
-        mChatRv.setAdapter(chatAdapter);
+        mChatAdapter = new ChatAdapter(ChatMSGLab.touch().get());
+        mChatRv.setAdapter(mChatAdapter);
     }
 
     @Override
     protected void setupListeners() {
+
         mTopView.setupListeners(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().finish();
             }
         }, null);
+
+        mSendBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!mChatContentEt.getText().toString().equals("")) {
+                    ChatMSG chatMSG = ChatMSG.get();
+                    chatMSG.setMessage(mChatContentEt.getText().toString());
+                    chatMSG.setFromMe(true);
+                    mChatContentEt.setText(null);
+                    ChatMSGLab.touch().add(chatMSG);
+                    updateChatMessage();
+                }
+            }
+        });
+    }
+
+    private void updateChatMessage() {
+        mChatAdapter.setChatMSGList(ChatMSGLab.touch().get());
+        mChatAdapter.notifyDataSetChanged();
+        mChatRv.scrollToPosition(mChatAdapter.getLastPosition());
     }
 
     @Override
@@ -85,6 +110,14 @@ public class ChatFragment extends BaseFragment {
         @Override
         public int getItemCount() {
             return mChatMSGList.size();
+        }
+
+        private void setChatMSGList(List<ChatMSG> chatMSGList) {
+            mChatMSGList = chatMSGList;
+        }
+
+        private int getLastPosition() {
+            return mChatMSGList.size() - 1;
         }
     }
 
