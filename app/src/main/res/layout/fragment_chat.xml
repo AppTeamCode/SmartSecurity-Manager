@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView
         android:id="@+id/topView"
@@ -13,6 +13,8 @@
         android:id="@+id/chat_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
         android:layout_weight="1"/>
 
     <include layout="@layout/chat_bar"/>

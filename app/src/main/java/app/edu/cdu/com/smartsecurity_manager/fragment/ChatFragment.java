@@ -9,9 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import java.util.List;
-
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.entity.ChatMSG;
 import app.edu.cdu.com.smartsecurity_manager.entity.ChatMSGLab;
