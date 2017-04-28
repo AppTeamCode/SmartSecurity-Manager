@@ -5,8 +5,14 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import app.edu.cdu.com.smartsecurity_manager.R;
+<<<<<<< Updated upstream
 import app.edu.cdu.com.smartsecurity_manager.fragment.ChatFragment;
+=======
+import app.edu.cdu.com.smartsecurity_manager.fragment.ChatSettingsFragment;
+>>>>>>> Stashed changes
 import app.edu.cdu.com.smartsecurity_manager.fragment.DeviceFragment;
+import app.edu.cdu.com.smartsecurity_manager.fragment.DeviceMessage;
+import app.edu.cdu.com.smartsecurity_manager.fragment.DevicesSettingsFragment;
 
 /**
  * SmartSecurity-Manager
@@ -30,6 +36,10 @@ public class SingleFragmentActivity extends BaseActivity {
     }
 
     private Fragment createFragment() {
+<<<<<<< Updated upstream
         return new ChatFragment();
+=======
+        return new DeviceMessage();
+>>>>>>> Stashed changes
     }
 }
