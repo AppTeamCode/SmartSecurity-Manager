@@ -48,11 +48,16 @@
 
         <TextView
             android:id="@+id/newMessageNumber_textView"
-            android:layout_width="30dp"
-            android:layout_height="0dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="end"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"/>
+            android:layout_marginTop="3.5dp"
+            android:layout_marginBottom="3.5dp"
+            android:layout_marginEnd="10dp"
+            android:text="1"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:background="@drawable/new_message_num_background"/>
 
         <LinearLayout
             android:layout_width="match_parent"

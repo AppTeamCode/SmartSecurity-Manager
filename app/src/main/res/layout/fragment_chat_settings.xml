@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView
+        android:id="@+id/chat_setting_topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@drawable/app_list_corner_round"
+        >
+
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_contact"
+            />
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="张三">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="20dp"
+                android:text="最早聊天时间">
+
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/chat_log_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/app_list_corner_round_top"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="聊天记录">
+
+        </TextView>
+        <TextView
+            android:id="@+id/chat_file_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/app_list_corner_round_bottom"
+            android:paddingLeft="20dp"
+            android:text="聊天文件">
+
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/clear_information_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/app_list_corner_round_top"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="清空聊天信息"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/app_list_corner_round_bottom"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:paddingLeft="20dp"
+                android:text="屏蔽此人"
+                />
+            <Switch
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/delete_contact_btn"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@drawable/app_list_corner_round"
+        android:text="删除联系人"/>
+</LinearLayout>
