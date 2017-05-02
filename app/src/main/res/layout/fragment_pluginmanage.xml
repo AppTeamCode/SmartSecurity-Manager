@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+<<<<<<< Updated upstream
+    <app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView
+        android:id="@+id/plugin_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView>
+
+=======
+>>>>>>> Stashed changes
+
+    <ListView
+        android:id="@+id/pluginmanage_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+<<<<<<< Updated upstream
+=======
+    <app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView
+        android:id="@+id/plugin_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView>
+
+>>>>>>> Stashed changes
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+    <app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView
+        android:id="@+id/about_and_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="196dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@mipmap/ic_launcher"/>
+    <TextView
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:text="                            V   4 .02 .1"
+        android:textSize="20dp"
+        android:padding="2.5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:text="   "
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:text="版本更新"
+            android:textSize="20dp"
+            android:layout_marginLeft="40dp"
+            />
+
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:src="@drawable/arrow_right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:text="功能介绍"
+            android:textSize="20dp"
+            android:layout_marginLeft="40dp"
+            />
+
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:src="@drawable/arrow_right"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:text="   "
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:text="反馈"
+            android:textSize="20dp"
+            android:layout_marginLeft="40dp"
+            />
+
+        <ImageButton
+            android:id="@+id/button4"
+            android:layout_marginLeft="210dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:text="帮助"
+            android:textSize="20dp"
+            android:layout_marginLeft="40dp"
+            />
+
+        <ImageButton
+            android:id="@+id/button5"
+            android:layout_marginLeft="210dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right"
+            />
+    </LinearLayout>
+
+</LinearLayout>

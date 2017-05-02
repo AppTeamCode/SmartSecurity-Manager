@@ -23,6 +23,7 @@ public class DrawerItemsAdapter extends BaseExpandableListAdapter {
     private static final String[][] sDrawerChildItems = new String[][] { null, null,
             {"账号管理", "消息管理", "流量管理", "记录管理", "隐私管理", "插件管理"},
             null};
+    public static final int ABOUT_AND_HELP = 3;
     public static final int EXPANDABLE_POSITION = 2;
 //    public static final int ACCOUNT_MANAGE = 0;
 //    public static final int MESSAGE_MANAGE = 1;

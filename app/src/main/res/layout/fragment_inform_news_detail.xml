@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView
+        android:id="@+id/inform_news_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:text="张师傅请求成为你的联系人"
+        android:textColor="@color/colortextview1"
+        android:textSize="18sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:text="联系人名称：    张师傅"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:text="性别：                    男"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:text="账号：            16958465465"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:text="类型：                  厨师"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:text="请求时间：      2016.6.12"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDarkText"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="留言:"
+        android:textSize="18sp"
+        android:textColor="@color/colortextview1"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/setbar_bg"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="40dp">
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:background="@color/colorButton"
+        android:text="拒绝"
+        android:textSize="18sp"
+        android:textColor="@color/colortextview2"/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="130dp"
+        android:background="@color/colorButton"
+        android:text="确定"
+        android:textSize="18sp"
+        android:textColor="@color/colortextview2"/>
+</LinearLayout>
+</LinearLayout>

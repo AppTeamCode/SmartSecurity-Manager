@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+<<<<<<< Updated upstream
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import app.edu.cdu.com.smartsecurity_manager.R;
@@ -15,6 +16,13 @@ import app.edu.cdu.com.smartsecurity_manager.fragment.manage.MessageManageFragme
 import app.edu.cdu.com.smartsecurity_manager.fragment.manage.PluginManageFragment;
 import app.edu.cdu.com.smartsecurity_manager.fragment.manage.PrivacyManageFragment;
 import app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView;
+=======
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+
+import app.edu.cdu.com.smartsecurity_manager.R;
+import app.edu.cdu.com.smartsecurity_manager.fragment.AccoutManageFragment;
+>>>>>>> Stashed changes
 
 /**
  * SmartSecurity-Manager
@@ -25,6 +33,7 @@ import app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView;
 
 public class SettingActivity extends BaseActivity {
 
+<<<<<<< Updated upstream
     private static final String EXTRA_FRAGMENT_TYPE = "extra_fragmentType";
 
     private TopView mTopView;
@@ -86,6 +95,17 @@ public class SettingActivity extends BaseActivity {
                 break;
             default:
                 break;
+=======
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_mysetting);
+        FragmentManager fm = getSupportFragmentManager();
+        Fragment fragment = fm.findFragmentById(R.id.fragment_container);
+        if(fragment==null){
+            fragment = new AccoutManageFragment();
+            fm.beginTransaction().add(R.id.fragment_container,fragment).commit();
+>>>>>>> Stashed changes
         }
     }
 }

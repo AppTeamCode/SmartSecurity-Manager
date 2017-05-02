@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView
+        android:id="@+id/accout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/colortextview3"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/avatar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="名称: 张师傅"
+            android:textColor="@color/colortextview2"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/chat_be_checked"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:text="一般用户"
+            android:textColor="@color/colortextview1"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/setbar_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:paddingLeft="10dp"
+            android:text="性别： 男"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:paddingLeft="10dp"
+            android:text="当前状态：在线"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:paddingLeft="10dp"
+            android:text="添加联系人时间： 2012/02/02"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:paddingLeft="10dp"
+            android:text="分组： 我的好友"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:paddingLeft="10dp"
+            android:text="别名： 张师傅"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDarkText"/>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:drawableRight="@drawable/ic_btn_search_go"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="二维码："
+            android:textSize="16sp"
+            android:textColor="@color/colorDarkText"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colortextview2"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorButton"
+            android:text="发消息"
+            android:textSize="16sp"
+            android:textColor="@color/colortextview2"/>
+    </LinearLayout>
+</LinearLayout>

@@ -5,5 +5,15 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorDarkText">#1d1919</color>
     <color name="colorLightText">#463c3c</color>
+<<<<<<< Updated upstream
     <color name="colorMessageRadioButtonChecked">#6E6363</color>
+    <color name="colorButton">#66ccff</color>
+    <color name="colortextview1">#6c0124</color>
+    <color name="colortextview2">#ffffff</color>
+    <color name="colortextview3">#264c72</color>
+
+=======
+    <color name="color2">#66CCFF</color>
+    <color name="color3">#6c0124</color>
+>>>>>>> Stashed changes
 </resources>
