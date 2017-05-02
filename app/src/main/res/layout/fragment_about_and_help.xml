@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+    <app.edu.cdu.com.smartsecurity_manager.ui.widget.TopView
+        android:id="@+id/about_and_help_topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+<ImageView
+    android:id="@+id/smartmonitor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="50dp"
+    android:src="@mipmap/ic_launcher" />
+
+<TextView
+    android:id="@+id/version_number"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="v 4 .0 2 .1"
+    android:textColor="#0099CC"
+    android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/version_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/ic_right_arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="10dp"
+                    android:text="版本更新"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/setbar_bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/function_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/ic_right_arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="10dp"
+                    android:text="功能介绍"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="25dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/setbar_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/help"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:gravity="center_vertical"
+                android:paddingLeft="35dp"
+                android:paddingRight="10dp"
+                android:text="帮助"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/setbar_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:gravity="center_vertical"
+                android:paddingLeft="35dp"
+                android:paddingRight="10dp"
+                android:text="反馈"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+</LinearLayout>

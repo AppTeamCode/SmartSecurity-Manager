@@ -8,6 +8,8 @@ import android.util.Log;
 
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.fragment.InformNewsDetailFragment;
+import app.edu.cdu.com.smartsecurity_manager.R;
+import app.edu.cdu.com.smartsecurity_manager.fragment.ChatFragment;
 
 /**
  * SmartSecurity-Manager
@@ -33,5 +35,6 @@ public class SingleFragmentActivity extends BaseActivity {
 
     private Fragment createFragment() {
         return new InformNewsDetailFragment();
+
     }
 }

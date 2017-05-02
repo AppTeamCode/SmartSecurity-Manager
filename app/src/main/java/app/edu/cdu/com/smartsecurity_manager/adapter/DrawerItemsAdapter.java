@@ -9,6 +9,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import app.edu.cdu.com.smartsecurity_manager.R;
+import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
 
 /**
  * Created by Pantiy on 2017/3/28.
@@ -80,25 +81,27 @@ public class DrawerItemsAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.list_item_with_icon, parent, false);
-            ImageView imageView = (ImageView) convertView.findViewById(R.id.itemIcon_imageView);
-            imageView.setImageResource(R.mipmap.ic_setting);
-            imageView.setBackgroundColor(Color.GRAY);
-            TextView textView = (TextView) convertView.findViewById(R.id.itemName_textView);
-            textView.setText(sDrawerGroupItems[groupPosition]);
+                convertView = LayoutInflater.from(mContext).inflate(R.layout.list_item_with_icon, parent, false);
         }
+        ImageView imageView = CommonViewHolder.get(convertView, R.id.itemIcon_imageView);
+        imageView.setImageResource(R.mipmap.ic_setting);
+        imageView.setBackgroundColor(Color.GRAY);
+        TextView textView = CommonViewHolder.get(convertView, R.id.itemName_textView);
+        textView.setText(sDrawerGroupItems[groupPosition]);
         return convertView;
     }
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         if (groupPosition == EXPANDABLE_POSITION) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.list_item_with_icon, parent, false);
+            if (convertView == null) {
+                convertView = LayoutInflater.from(mContext).inflate(R.layout.list_item_with_icon, parent, false);
+            }
             convertView.setPadding(35, 0, 0, 0);
-            ImageView imageView = (ImageView) convertView.findViewById(R.id.itemIcon_imageView);
+            ImageView imageView = CommonViewHolder.get(convertView, R.id.itemIcon_imageView);
             imageView.setImageResource(R.mipmap.ic_setting);
             imageView.setBackgroundColor(Color.GRAY);
-            TextView textView = (TextView) convertView.findViewById(R.id.itemName_textView);
+            TextView textView = CommonViewHolder.get(convertView, R.id.itemName_textView);
             textView.setText(sDrawerChildItems[EXPANDABLE_POSITION][childPosition]);
             return convertView;
         }

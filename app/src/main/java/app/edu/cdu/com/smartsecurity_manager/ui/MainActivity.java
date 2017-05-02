@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -20,18 +18,10 @@ import android.widget.TextView;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerFragmentPagerAdapter;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DrawerItemsAdapter;
-<<<<<<< Updated upstream
 import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
-=======
-import app.edu.cdu.com.smartsecurity_manager.fragment.FlowManageFragment;
-import app.edu.cdu.com.smartsecurity_manager.fragment.HistoryManageFragment;
-import app.edu.cdu.com.smartsecurity_manager.fragment.NewsManageFragment;
-import app.edu.cdu.com.smartsecurity_manager.fragment.PluginManageFragment;
->>>>>>> Stashed changes
 
 public class MainActivity extends BaseActivity {
 
@@ -42,8 +32,7 @@ public class MainActivity extends BaseActivity {
     private static final int DEVICE = 0;
     private static final int CONTACT = 1;
     private static final int MESSAGE = 2;
-    private Fragment fragment;
-    private FragmentManager fm = getSupportFragmentManager();
+
     private DrawerLayout mDrawerLayout;
     private ViewPager mViewPager;
     private ImageView mUserAvatarOnTopBar;
@@ -51,12 +40,8 @@ public class MainActivity extends BaseActivity {
     private RadioGroup mBottomBarRadioGroup;
     private TextView mCurrentFragmentNameTv;
     private SearchView mSearchView;
-<<<<<<< Updated upstream
     private ExpandableListView mDrawerItemsElv;
 
-=======
-    private ExpandableListView mDrawerItemsExpandableListView;
->>>>>>> Stashed changes
     private int[] mFragmentName = new int[] {R.string.device, R.string.contact, R.string.message};
     private List<RadioButton> mRadioButtonList = new ArrayList<>();
 
@@ -175,14 +160,8 @@ public class MainActivity extends BaseActivity {
                 }
                 switchCurrentState(current);
             }
-<<<<<<< Updated upstream
         });
         mDrawerItemsElv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-=======
-        });;
-
-        mDrawerItemsExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
->>>>>>> Stashed changes
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 skipToChild(groupPosition, childPosition);
@@ -192,56 +171,11 @@ public class MainActivity extends BaseActivity {
     }
 
     private void skipToChild(int groupPosition, int childPosition) {
-<<<<<<< Updated upstream
         if (groupPosition != DrawerItemsAdapter.EXPANDABLE_POSITION) {
             return;
         }
         Intent intent = SettingActivity.newInstance(this, childPosition);
         startActivity(intent);
-=======
-                switch (childPosition) {
-
-                    case DrawerItemsAdapter.ACCOUNT_MANAGE:
-                        Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-                        startActivity(intent);
-                        break;
-
-                    case DrawerItemsAdapter.MESSAGE_MANAGE:
-                        setContentView(R.layout.activity_mysetting);
-                        if (fragment == null) {
-                            fragment = new NewsManageFragment();
-                            fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
-                        }
-                        break;
-
-                    case DrawerItemsAdapter.DATA_MANAGE:
-                        setContentView(R.layout.activity_mysetting);
-                        if (fragment == null) {
-                            fragment = new FlowManageFragment();
-                            fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
-                        }
-                        break;
-
-                    case DrawerItemsAdapter.HISTORY_MANAGE:
-                        setContentView(R.layout.activity_mysetting);
-                        fragment = new HistoryManageFragment();
-                        fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
-                        break;
-
-                    case DrawerItemsAdapter.PRIVACY_MANAGE:
-
-                        break;
-
-                    case DrawerItemsAdapter.PLUGIN_MANAGE:
-                        setContentView(R.layout.activity_mysetting);
-                        fragment = new PluginManageFragment();
-                        fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
-                        break;
-
-                    default:
-                        break;
-                }
->>>>>>> Stashed changes
     }
 
     private void switchCurrentState(int current) {

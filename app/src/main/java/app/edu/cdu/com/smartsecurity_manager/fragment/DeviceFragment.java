@@ -1,13 +1,7 @@
 package app.edu.cdu.com.smartsecurity_manager.fragment;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
-
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.DeviceItemsAdapter;
 import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
@@ -20,13 +14,6 @@ import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
 public class DeviceFragment extends BaseFragment {
 
     private ListView mDeviceItemsListView;
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Toast.makeText(getActivity(), "Device create", Toast.LENGTH_SHORT).show();
-        return super.onCreateView(inflater, container, savedInstanceState);
-    }
 
     @Override
     protected void initViews(View view) {

@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
-
 import app.edu.cdu.com.smartsecurity_manager.R;
 import app.edu.cdu.com.smartsecurity_manager.adapter.ContactItemsAdapter;
 import app.edu.cdu.com.smartsecurity_manager.utils.CommonViewHolder;
@@ -21,10 +19,9 @@ public class ContactFragment extends BaseFragment {
 
     private ExpandableListView mContactELV;
 
-    @Nullable
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Toast.makeText(getActivity(), "Contact create", Toast.LENGTH_SHORT).show();
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
